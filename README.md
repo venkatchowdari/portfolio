@@ -1,4 +1,4 @@
-# MV.Chowdari.github.io
+# venkatchowdari.github.io/portfolio
 
 Personal Portfolio Website
 
