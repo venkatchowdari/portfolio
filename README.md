@@ -1,58 +1,154 @@
 # Venkat Chowdary Maridi — Portfolio
 
-Personal portfolio built with Next.js 16 (App Router), TypeScript, and Tailwind CSS v4.
+This repository contains the source code for my personal portfolio website and professional profile. The site is designed to reflect the same identity, experience, and project story shown in my resume and online presence.
 
-## Design concept
+## Profile
 
-The theme is grounded in the actual subject matter — RAG pipelines and backend
-systems — instead of a generic hero. Two signature elements:
+- Name: Venkat Chowdary Maridi
+- Role: CS Engineer — AI Systems & Backend
+- Location: Bangalore, India
+- Email: venkatchowdarymaridi72@gmail.com
+- Phone: +91 95505 23099
+- GitHub: https://github.com/venkatchowdari
+- LinkedIn: https://www.linkedin.com/in/venkat-chowdari-maridi-6b763a26a
+- LeetCode: https://leetcode.com/venkatchowdari
 
-- **Terminal boot sequence** (`components/Terminal.tsx`) — a typed "boot log" in the hero.
-- **Pipeline trace diagram** (`components/PipelineTrace.tsx`) — an animated node diagram
-  (upload → chunk → embed → retrieve → generate), which is literally the architecture
-  of the RAG Doc Q&A project, not decoration.
+## Professional Summary
 
-Section eyebrows use real shell commands (`$ cat skills.json`, `$ ./experience.sh`)
-instead of generic numbered markers, since that's how you'd actually inspect this content.
+Computer Science graduate specializing in AI engineering and backend development, with hands-on experience building retrieval-augmented generation (RAG) pipelines, LLM-powered applications, and production APIs.
 
-## Editing content
+I have built end-to-end systems such as a document Q&A pipeline with FastAPI, LangChain, ChromaDB, and Groq, and open-source tooling that reduces LLM token consumption for long documents. I am especially interested in turning AI ideas into dependable, containerized, production-style systems that prioritize performance, maintainability, and practical deployment.
 
-Everything text-based lives in **`data/site.ts`** — name, bio, skills, projects,
-experience, and social links. You should almost never need to touch component
-files just to update content.
+## Technical Skills
 
-To add/update a project, add an object to the `projects` array in `data/site.ts`.
+### Languages
+- Python
+- Java
+- JavaScript
+- SQL
+- C
 
-## Local development
+### AI / ML
+- LangChain
+- Retrieval-Augmented Generation (RAG)
+- LLM Integration
+- Prompt Engineering
+- ChromaDB
+- Vector Embeddings
+- Groq API
+- OpenAI API
+- LLaMA
+- fastembed
+- Ollama
+- Natural Language Processing
 
-```bash
-npm install
-npm run dev
-```
+### Backend & Frameworks
+- FastAPI
+- Spring Boot
+- Flask
+- REST APIs
+- Node.js
+- Next.js
 
-Open http://localhost:3000.
+### Frontend
+- React
+- Next.js
+- Streamlit
+- HTML
+- CSS
 
-## Before you deploy
+### Infrastructure & DevOps
+- Docker
+- Docker Compose
+- Celery
+- Redis
+- Git
+- GitHub
+- Linux
 
-1. Drop your latest resume PDF into `public/resume.pdf` (the nav "resume.pdf"
-   button links to `/resume.pdf`).
-2. Double check `data/site.ts` — especially the `profile` object — for accuracy.
-3. Run `npm run build` locally once to confirm everything compiles.
+### Databases
+- MySQL
+- MongoDB
+- ChromaDB
 
-## Deploying to Vercel
+## Experience
 
-1. Push this project to a GitHub repo (e.g. `venkatchowdari/portfolio`).
-2. Go to https://vercel.com/new and import that repo.
-3. Framework preset: Next.js (auto-detected). No environment variables needed.
-4. Deploy. Vercel will give you a `*.vercel.app` URL immediately; you can attach
-   a custom domain later from the Vercel dashboard if you want one.
+### Generative AI Intern — CodeGnan IT Institute
+Duration: Mar 2024 – Jul 2024
 
-Every push to your default branch will auto-redeploy.
+- Prototyped document Q&A and summarization tools using OpenAI and LLaMA APIs, improving contextual accuracy through iterative RAG pipeline design.
+- Engineered prompt structures that increased retrieval precision and contextual relevance within the RAG pipeline.
+- Deployed prototypes via Streamlit, accelerating internal testing and stakeholder review cycles.
+- Reduced model inference latency by 15–20% through profiling and tuning of API call patterns.
 
-## Stack
+## Featured Projects
 
-- Next.js 16 (App Router, Turbopack)
-- TypeScript
-- Tailwind CSS v4 (CSS-first config, see `app/globals.css` for design tokens)
-- lucide-react for utility icons (GitHub/LinkedIn are hand-rolled SVGs in
-  `components/icons.tsx` since lucide-react no longer ships brand logos)
+### RAG Document Q&A System
+Repository: https://github.com/venkatchowdari/rag-doc-qa
+
+Stack: FastAPI · LangChain · ChromaDB · Groq (LLaMA 3.1) · fastembed · Next.js · Docker
+
+- Architected an end-to-end retrieval-augmented generation pipeline, including document ingestion, chunking, embedding generation, and grounded query response.
+- Integrated Groq-hosted LLaMA 3.1 for inference and fastembed for embeddings, balancing latency and retrieval accuracy.
+- Containerized the full stack with Docker Compose for reproducible deployment.
+
+### ContextCrunch
+Repository: https://github.com/venkatchowdari/contextcrunch
+
+Stack: FastAPI · Celery · Redis · Next.js · Docker · MIT License
+
+- Built and open-sourced a self-hosted file-to-Markdown converter that reduces LLM input token consumption by 25–60% depending on file type.
+- Designed a seven-step Markdown optimization pipeline with automated token-savings metrics using tiktoken.
+- Implemented an asynchronous processing queue with Celery and Redis, with Flower-based task monitoring.
+
+### EasyAI
+Repository: https://github.com/venkatchowdari/EasyAI
+
+Stack: Next.js · OpenAI · LangChain · Vercel
+
+- Shipped an AI-powered prompt-validation platform that classifies and screens user prompts for safety and contextual clarity before generation.
+- Scaled to 2,000+ users within the first week through Vercel serverless deployment.
+
+### Hotel Booking System
+Repository: https://github.com/venkatchowdari/Hotel-Management-System
+
+Stack: Java · OOP · MySQL
+
+- Designed a modular hotel management application for room inventory, bookings, and customer records.
+- Integrated a MySQL persistence layer for reliable booking and customer storage.
+
+## Education
+
+Bachelor of Technology in Computer Science & Engineering
+- Institution: NRI Institute of Technology
+- Duration: Oct 2022 – Mar 2026
+- GPA: 7.6 / 10
+- Location: Bangalore, India
+
+Relevant coursework:
+- Data Structures & Algorithms
+- Operating Systems
+- Computer Networks
+- Software Design
+- DBMS
+
+## Certifications
+
+- Programming Foundations (LinkedIn Learning)
+- Java 11 (LinkedIn Learning)
+- Java Data Structures (NPTEL)
+
+## Project Structure
+
+This portfolio website is built with Next.js, TypeScript, and Tailwind CSS. Most of the site content is centralized in `data/site.ts`, so updates to profile, projects, skills, and experience can usually be made without editing component files directly.
+
+
+## Design Notes
+
+The portfolio theme is grounded in the actual subject matter of the work:
+
+- A terminal-style boot sequence in the hero section
+- A pipeline trace diagram showing the RAG document Q&A flow
+- Shell-style section labels that reflect how the site content is organized
+
+These design choices reinforce the backend and AI systems focus rather than presenting a generic portfolio aesthetic.
