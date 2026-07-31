@@ -1,8 +1,20 @@
+
 // ─────────────────────────────────────────────────────────────
 // All portfolio content lives here. Edit this file to update
 // the site — no need to touch component code for text changes.
 // ─────────────────────────────────────────────────────────────
-
+ 
+// ─────────────────────────────────────────────────────────────
+// Base-path helper: on GitHub Pages this site is served from
+// /portfolio, not the domain root, so plain <a href="/x"> links to
+// static files (resume.pdf, etc.) need the prefix. next/link and
+// next/image handle this automatically — this helper is only for
+// hrefs we write as raw strings. On Vercel, NEXT_PUBLIC_BASE_PATH
+// is unset, so this is a no-op.
+// ─────────────────────────────────────────────────────────────
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const withBasePath = (path: string) => `${BASE_PATH}${path}`;
+ 
 export const profile = {
   name: "Venkat Chowdary Maridi",
   role: "CS Engineer — AI Systems & Backend",
@@ -12,27 +24,27 @@ export const profile = {
   github: "https://github.com/venkatchowdari",
   linkedin: "https://www.linkedin.com/in/venkat-chowdari-maridi-6b763a26a",
   leetcode: "https://leetcode.com/venkatchowdari",
-  resumeUrl: "C:\\venkat\\portfolio\\public\\Venkat_Chowdary_M.pdf", // TODO: drop your latest resume PDF into /public/resume.pdf
+  resumeUrl: withBasePath("/resume.pdf"),
   tagline:
     "I build retrieval-augmented and backend systems — from RAG pipelines to token-efficient document processing — and ship them end-to-end with Docker.",
 };
-
+ 
 export const bootLines = [
-  { prompt: "whoami", output: "venkat_chowdary — Computer Science & Engineering Graduate" },
+  { prompt: "whoami", output: "venkat_chowdary — Computer Science and Engineer Graduate" },
   {
     prompt: "cat role.txt",
-    output: "AI/ML systems · backend engineering · RAG pipelines",
+    output: "AI/ML systems · SDE · backend engineering · RAG pipelines ",
   },
   {
     prompt: "./status.sh",
-    output: "open to full-time SDE / AI-ML roles · graduating Mar 2026",
+    output: "open to Internship and full-time SDE / AI-ML roles · graduated Mar 2026",
   },
 ];
-
+ 
 export const education = {
   school: "NRI Institute of Technology",
   degree: "B.Tech, Computer Science & Engineering",
-  duration: "Nov 2022 – Mar 2026",
+  duration: "Oct 2022 – Mar 2026",
   gpa: "7.6 / 10",
   coursework: [
     "Data Structures & Algorithms",
@@ -40,10 +52,9 @@ export const education = {
     "Computer Networks",
     "Software Design",
     "DBMS",
-    "AI/ML",
   ],
 };
-
+ 
 export const skills = [
   {
     category: "languages",
@@ -66,7 +77,7 @@ export const skills = [
     items: ["Git", "GitHub", "VS Code", "Linux", "Conventional Commits"],
   },
 ];
-
+ 
 export type Project = {
   slug: string;
   name: string;
@@ -78,7 +89,7 @@ export type Project = {
   live?: string;
   featured?: boolean;
 };
-
+ 
 export const projects: Project[] = [
   {
     slug: "rag-doc-qa",
@@ -138,7 +149,7 @@ export const projects: Project[] = [
     github: "https://github.com/venkatchowdari/Hotel-Management-System",
   },
 ];
-
+ 
 export const experience = [
   {
     role: "Generative AI Intern",
@@ -152,7 +163,7 @@ export const experience = [
     ],
   },
 ];
-
+ 
 export const nav = [
   { href: "#about", label: "about" },
   { href: "#skills", label: "skills" },
@@ -160,3 +171,4 @@ export const nav = [
   { href: "#experience", label: "experience" },
   { href: "#contact", label: "contact" },
 ];
+ 

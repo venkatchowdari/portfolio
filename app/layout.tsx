@@ -20,12 +20,28 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://venkatchowdari.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Venkat Chowdary Maridi — CS Engineer",
   description:
     "Portfolio of Venkat Chowdary Maridi — CS engineer building RAG pipelines, backend systems, and open-source tools.",
   icons: {
     icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Venkat Chowdary Maridi — CS Engineer",
+    description:
+      "Portfolio of Venkat Chowdary Maridi — CS engineer building RAG pipelines, backend systems, and open-source tools.",
+    type: "website",
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Venkat Chowdary Maridi — CS Engineer",
+    description:
+      "Portfolio of Venkat Chowdary Maridi — CS engineer building RAG pipelines, backend systems, and open-source tools.",
   },
 };
 
